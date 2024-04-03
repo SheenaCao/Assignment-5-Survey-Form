@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <div id="title"><h1>Survey Form</h1></div>
+</header>
+
+<form id="survey-form" onsubmit="event.preventDefault(); alert('Thank you for your submission!');">
+
+    <div id="description">Let us know how we can improve our service</div><br>
+
+    <fieldset class="fieldset">
+
+        <div class="sub-group">
+            <label class="left" id="name-label" for="name">*Name:</label>
+            <input type="text" name="customer-name" class="right input-field" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="sub-group">
+            <label class="left" id="email-label" for="email">*Email:</label>
+            <input type="email" name="Email-address" class="right input-field" placeholder="Enter your email" id="email" required>
+        </div>
+
+        <div class="sub-group">
+            <label class="left" id="number-label" for="number">*Age:</label>
+            <input type="number" name="Age" placeholder="Age" min="1" max="100" class="right input-field" id="number">
+        </div>
+
+        <div class="sub-group">
+            <label class="left" id="handphone-label" for="handphone">*Handphone:</label>
+            <input type="text" placeholder="Phone Number" class="right input-field" id="handphone">
+        </div>
+
+        <div class="sub-group">
+            <label class="left" for="dropdown">Is this your first time using our data analytics services?</label>
+            <select class="right dropdown" id="dropdown" name="first_time_user">
+                <option selected disabled>Select an option</option>
+                <option value="yes">Yes, this is my first time</option>
+                <option value="no">No, I've used your services before</option>
+            </select>
+        </div>
+
+    </fieldset>
+
+    <fieldset class="fieldset">
+        <div class="sub-group">
+            <label class="left">
+                *Which of our data analytics services have you utilized?</label>
+
+            <ul style="list-style: none;" class="right">
+
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="data-cleaning">Data Cleaning and Preparation</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="data-visualization">Data Visualization and Reporting</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="predictive-analysis">Predictive Analysis and Modeling</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="machine-learning">Machine Learning and AI Integration</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="business-intelligence">Business Intelligence Solutions</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="data-warehouse">Data Warehousing</label></li>
+                <li class="checkbox"><label><input type="checkbox" name="data-service" value="big-data">Big Data Analytics</label></li>
+            </ul>
+        </div>
+    </fieldset>
+
+    <fieldset class="fieldset">
+        <div class="sub-group">
+            <label class="left" id="left-radio">Would you recommend our data analytics services to others?</label>
+
+            <ul style="list-style: none" class="right">
+                <li class="radio"><label><input name="recommendation" value="yes" type="radio" class="recommendation">Yes</label></li>
+                <li class="radio"><label><input name="recommendation" value="maybe" type="radio" class="recommendation">Maybe</label></li>
+                <li class="radio"><label><input name="recommendation" value="no" type="radio" class="recommendation">No</label></li>
+              </ul>
+              </div>
+              </fieldset>
+              <fieldset class="fieldset">
+                <h2>Any comments or suggestions?</h2>
+                <div class="commentbox">
+                    <textarea rows="4" placeholder="Enter your comment here..."></textarea>
+                    <br></br>
+                    <button id="submit" type="submit">Submit</button>
+                </div>
+            </fieldset>
+            
